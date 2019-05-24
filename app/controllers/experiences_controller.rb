@@ -2,8 +2,7 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
   def index
-    @experiences = Experience.all
-    @experiences = authorize @restaurant
+    @experiences = policy_scope(Experience)
   end
 
   def new

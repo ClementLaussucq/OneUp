@@ -1,0 +1,28 @@
+<div class="banner">
+  <div class="banner-info">
+    <h1>
+      <%= link_to "create a unique experience", <new_experience_path%></new_experience_path%>
+    </h1>
+    <p>
+    </p>
+  </div>
+</div>
+
+<div class="flexbox">
+  dropbown x2
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="card-experience">
+      <img src=''>
+    experiences.each do|e| do
+      <div class="experience-description">
+        <p><%= link_to experience.name, experience_path(experience)  %></p>
+        <p> <%= experience.adress %>
+        <p> <%= experience.price %>
+      </div>
+    </div>
+  </div>
+</div>
