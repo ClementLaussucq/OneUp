@@ -3,6 +3,7 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
+    @experiences = authorize @restaurant
   end
 
   def new
