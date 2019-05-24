@@ -22,6 +22,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
