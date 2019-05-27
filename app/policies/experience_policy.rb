@@ -15,7 +15,7 @@ class ExperiencePolicy < ApplicationPolicy
   end
 
   def show?
-    record.user == user
+    return true
   end
 
   def destroy?

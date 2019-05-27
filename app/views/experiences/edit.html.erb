@@ -1,2 +1,11 @@
-<h1>Experiences#edit</h1>
-<p>Find me in app/views/experiences/edit.html.erb</p>
+<h1>Experiences#new</h1>
+<p>Find me in app/views/experiences/new.html.erb</p>
+
+<%= simple_form_for @experience do |f|%>
+<%= f.input :name  %>
+<%= f.input :description  %>
+<%= f.input :price  %>
+<%= f.input :category  %>
+<%= f.input :address %>
+<%= f.submit  %>
+<% end %>

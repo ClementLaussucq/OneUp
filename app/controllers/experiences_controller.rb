@@ -7,7 +7,6 @@ class ExperiencesController < ApplicationController
 
   def new
     @experience = Experience.new
-
     authorize @experience
   end
 
@@ -24,6 +23,7 @@ class ExperiencesController < ApplicationController
   end
 
   def edit
+    authorize @experience
   end
 
   def show
@@ -32,6 +32,7 @@ class ExperiencesController < ApplicationController
 
   def update
     if @experience.update(strong_params)
+      authorize @experience
       redirect_to experience_path(@experience)
     else
       render :edit
