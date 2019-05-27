@@ -1,6 +1,6 @@
 class Experience < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   validates :description, :name, :price, :category, :address, presence: true, allow_blank: false
 
   CATEGORIES = [

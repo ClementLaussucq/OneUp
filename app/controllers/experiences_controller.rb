@@ -1,6 +1,12 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
+
+  skip_after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  skip_after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+
+
+
   def index
     @experiences = policy_scope(Experience)
   end
