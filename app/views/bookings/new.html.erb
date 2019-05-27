@@ -1,9 +1,27 @@
-<% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "alert-danger" %>
-<% end %>
-<div class="widget-content" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
-  <%= simple_form_for [@experience, @booking] do |f| %>
-    <%= f.input :date, as: :string, input_html: {class: "datepicker"}  %>
-    <%= f.submit  %>
+<div class="container">
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "alert-danger" %>
   <% end %>
+  <div class="card-booking">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+    <div class="card-booking-infos">
+      <div class="row">
+        <div class="card-booking-details col-12 col-md-6">
+          <h2><%="#{@experience.category} in #{@experience.address.capitalize}" %></h2>
+          <p><%= @experience.name %></p>
+          <p><%= @experience.description %></p>
+          <%= link_to "Back to more experiences", experiences_path, class: "btn btn-primary" %>
+        </div>
+        <div class="widget-content col-12 col-md-6" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
+          <%= simple_form_for [@experience, @booking] do |f| %>
+            <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker"}  %>
+            <%= f.submit "Book now!", class: "btn btn-danger w-100" %>
+          <% end %>
+        </div>
+      </div>
+      <h2 class="card-booking-pricing"><%= "#{@experience.price} €" %></h2>
+      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-booking-user avatar-bordered"/>
+    </div>
+  </div>
 </div>
+

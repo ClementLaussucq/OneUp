@@ -5,4 +5,6 @@ import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
 
 import "../plugins/flatpickr";
+import { dateInputs } from '../plugins/flatpickr';
+dateInputs();
 
