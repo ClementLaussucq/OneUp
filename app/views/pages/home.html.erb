@@ -38,6 +38,26 @@
   </div>
 </div>
 
+<div class="container d-flex flex-column align-items-center">
+  <h2 class="subtitle">Our Members Love</h2>
+
+<div class="cards " >
+  <% @experiences.sample(6).each do |experience| %>
+  <div class="row ">
+    <div class="card-trip">
+      <%= image_tag('christophe.jpg', class: "vignette")%>
+      <div class="card-trip-infos">
+        <div>
+          <h3><%= link_to experience.name, experience_path(experience) %></h3>
+          <p><%= experience.description%></p>
+        </div>
+        <h2>€1000</h2>
+      </div>
+    </div>
+  </div>
+    <% end %>
+  </div>
+</div>
 
 <div id="carouselExampleIndicators" class="carousel-container carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -68,6 +88,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 <div class="footer footer-icons d-flex flex-column align-items-center">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
