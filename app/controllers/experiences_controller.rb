@@ -7,10 +7,15 @@ class ExperiencesController < ApplicationController
 
   def new
     @experience = Experience.new
+
+    authorize @experience
   end
 
   def create
     @experience = Experience.new(strong_params)
+    @experience.user = current_user
+    authorize @experience
+
     if @experience.save
       redirect_to experience_path(@experience)
     else
@@ -22,6 +27,7 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    authorize @experience
   end
 
   def update
@@ -44,6 +50,6 @@ class ExperiencesController < ApplicationController
   end
 
   def strong_params
-    params.require(:experience).permit(:description, :name, :price, :address, :category, :availability_date)
+    params.require(:experience).permit(:description, :name, :price, :address, :category)
   end
 end
