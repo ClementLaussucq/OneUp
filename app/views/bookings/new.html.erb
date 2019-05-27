@@ -1,8 +1,9 @@
 <% flash.each do |key, value| %>
   <%= content_tag :div, value, class: "alert-danger" %>
 <% end %>
-
-<%= simple_form_for [@experience, @booking] do |f| %>
-  <%= f.input :date, as: :date  %>
-  <%= f.submit  %>
-<% end %>
+<div class="widget-content" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
+  <%= simple_form_for [@experience, @booking] do |f| %>
+    <%= f.input :date, as: :string, input_html: {class: "datepicker"}  %>
+    <%= f.submit  %>
+  <% end %>
+</div>
