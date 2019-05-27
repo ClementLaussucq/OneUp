@@ -22,10 +22,14 @@
         <p><%= link_to experience.name, experience_path(experience)  %></p>
         <p> <%= experience.address %>
         <p> <%= experience.price %>
-
       </div>
+      <%= link_to experience_path(experience), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fa fa-trash destroy_dose"></i>
+      <% end %>
     <% end %>
     </div>
+
+
   </div>
 </div>
 

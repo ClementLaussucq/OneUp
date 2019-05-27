@@ -40,6 +40,7 @@ class ExperiencesController < ApplicationController
 
   def destroy
     @experience.destroy
+    authorize @experience
     redirect_to experiences_path
   end
 
