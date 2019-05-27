@@ -14,15 +14,20 @@
 
 <div class="container">
 
-  <div class="row">
-    <div class="card-experience">
-      <img src=''>
-    <% experiences.each do |experience| %>
-      <div class="experience-description">
-        <p><%= link_to experience.name, experience_path(experience)  %></p>
-        <p> <%= experience.address %>
-        <p> <%= experience.price %>
-      </div>
+ <div class="cards" >
+ <% @experiences.each do |experience| %>
+ <div class="row ">
+  <div class="card-trip">
+   <img src='https://images.unsplash.com/photo-1485265449635-ca623a55e95c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'>
+   <div class="card-trip-infos">
+    <div>
+     <h3><%= link_to experience.name, experience_path(experience) %></h3>
+     <p><%= experience.description%></p>
     </div>
+    <h2>€1000</h2>
+   </div>
   </div>
+ </div>
+  <% end %>
+ </div>
 </div>

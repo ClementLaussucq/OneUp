@@ -16,13 +16,13 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
 group :development, :test do
-  gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
