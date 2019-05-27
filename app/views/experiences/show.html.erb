@@ -4,6 +4,8 @@
 
   <%= @experience.name%>
 <br>
-  <%= link_to 'back', experiences_path  %>
+  <%= link_to 'back', experiences_path, class: "btn btn-primary" %>
+
+  <%= link_to "Book your amazing experience", new_experience_booking_path(@experience), class: "btn btn-primary"  %>
 
 
