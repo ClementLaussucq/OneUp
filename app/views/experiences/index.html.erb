@@ -26,6 +26,10 @@
       <%= link_to experience_path(experience), method: :delete, data: { confirm: "Are you sure?" } do %>
       <i class="fa fa-trash destroy_dose"></i>
       <% end %>
+
+      <%= link_to 'edit', edit_experience_path(experience) %>
+
+
     <% end %>
     </div>
 
