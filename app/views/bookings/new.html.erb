@@ -1,2 +1,8 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "alert-danger" %>
+<% end %>
+
+<%= simple_form_for [@experience, @booking] do |f| %>
+  <%= f.input :date, as: :date  %>
+  <%= f.submit  %>
+<% end %>
