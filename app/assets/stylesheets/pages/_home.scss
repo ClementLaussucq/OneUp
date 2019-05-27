@@ -1,1 +1,60 @@
 // Specific CSS for your home-page
+.btn-red {
+  color: white;
+  background-color: #5C1D28;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 15 30px;
+
+}
+.btn-black {
+  color: white;
+  background-color: #061013;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 15 50px;
+  margin-left: 10px;
+}
+// #boutons {
+//   margin-top: 50px;
+// }
+.container h1 {
+  margin-bottom: 112px;
+}
+.vignette {
+  height: 300px;
+  width: auto;
+}
+
+.cards {
+  margin: 50px 50px;
+}
+.subtitle {
+  margin-top: 50px;
+  margin-bottom: -15px;
+  color:#5C1D28;
+  font-weight: bolder;
+}
+.carousel-inner {
+  margin-top: 50px;
+  background-color: white;
+  text-align: center;
+  padding: 80px 15px;
+  color: white;
+  background-color: #061013;
+}
+.slide {
+  background-color: #061013;
+}
+.footer-copyright {
+  font-size: 24px;
+  margin-bottom: 100px;
+}
+
+.footer-icons {
+margin-top: 100px;
+}
+.carousel-container {
+  margin-top: 80px;
+  padding: 32px 80px;
+}
