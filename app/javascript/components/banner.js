@@ -5,7 +5,7 @@ const loadDynamicBannerText = () => {
   if (bannerTypedText) {
     new Typed('#banner-typed-text', {
       strings: ["With A Lawyer", "With A Penguin", "With An Entrepreneur", "With A Teacher"],
-      typeSpeed: 50,
+      typeSpeed: 30,
       loop: true
     });
   };
