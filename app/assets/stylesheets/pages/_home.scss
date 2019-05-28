@@ -15,6 +15,14 @@
   padding: 15 50px;
   margin-left: 10px;
 }
+.btn-black-nav {
+  color: white;
+  background-color: #061013;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 4px 15px;
+  margin-right: 10px;
+}
 // #boutons {
 //   margin-top: 50px;
 // }
@@ -30,10 +38,14 @@
   margin: 50px 50px;
 }
 .subtitle {
-  margin-top: 50px;
-  margin-bottom: -15px;
   color:#5C1D28;
   font-weight: bolder;
+}
+.subtitle2 {
+  color:#5C1D28;
+  font-weight: bolder;
+  margin-top: 50px;
+  margin-bottom: -15px;
 }
 .carousel-inner {
   margin-top: 50px;
