@@ -9,6 +9,14 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = policy_scope(Experience)
+    @experiences = Flat.where.not(latitude: nil, longitude: nil)
+
+    @markers = @experiences.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def new

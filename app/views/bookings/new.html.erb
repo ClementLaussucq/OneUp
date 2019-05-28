@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner rounde d-flex justify-content-center align-items-center">
 
 <div class="container d-flex justify-content-center align-items-center">
   <% flash.each do |key, value| %>
@@ -9,25 +9,28 @@
     <div class="d-flex flex-column align-items-left">
       <div class="row d-flex justify-content-around align-items-center">
             <h2 class="text-center"><%= @experience.name%> </h2>
-            <p id="experience-show-address"><i class="fas fa-map-marker-alt">  </i>  <%=@experience.address%></p>
-          <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-booking-user avatar-bordered"/>
+            <p class="my-0"><i class="fas fa-map-marker-alt">  </i>  <%=@experience.address%></p>
+            <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
       </div>
-      <div class="row d-flex justify-content-around align-items-center">
-          <h3 class='font-weight-bold' id="price-up"><%= "#{@experience.price} €" %></h3>
-      </div>
-      <div class="d-flex flex-column justify-content-around align-items-center">
-          <h3>A bit more about this experience...</h3>
-          <p><%= @experience.description %></p>
-      </div>
-        <div class="spacing widget-content col-12 d-flex flex-column justify-content-around align-items-center" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
+        <div class="widget-content col-12 d-flex flex-column justify-content-around align-items-center" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
           <%= simple_form_for [@experience, @booking] do |f| %>
             <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker"}  %>
-            <%= f.submit "Book now!", class: " btn-margin btn btn-danger w-100" %>
+            <%= f.submit "Book now!", class: " btn-margin btn btn-danger w-100 mb-5" %>
           <% end %>
         </div>
 
-    </div>
+      <div class="row d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-column justify-content-around align-items-left">
+            <h3>A bit more about this experience...</h3>
+            <p><%= @experience.description %></p>
+          </div>
+          <div class="d-flex flex-column justify-content-around align-items-left">
+          <h3 class='font-weight-bold' id="price-up"><%= "#{@experience.price} €" %></h3>
+
+        </div>
       </div>
+    </div>
+   </div>
     </div>
   </div>
 </div>

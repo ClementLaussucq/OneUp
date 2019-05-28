@@ -22,12 +22,7 @@
 }
 
 
-.card-booking .card-booking-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: top;
-  position: relative;
+
   .card-booking-details {
     display: flex;
     flex-direction: column;
@@ -39,7 +34,7 @@
     justify-content: space-between;
   }
   .card-booking-user {
-    position: absolute;
+    position: relative;
     right: 16px;
     top: -20px;
     width: 40px;
@@ -75,19 +70,14 @@
 .experience2-show-card {
   padding: 50px 100px;
 }
-#experience-show-address {
-  margin-left: 10px;
-  font-size: 16px;
-}
+
 #price {
   margin-top: -80px;
   margin-bottom: 40px;
   font-weight: bolder;
 }
 .btn-margin {
-  padding-bottom: 50px;
 }
 #price-up {
-  margin-top: -60px!important;
-}
+  margin-top: -60px !important;
 }
