@@ -175,4 +175,12 @@ class Experience < ApplicationRecord
   def unavailable_dates
     bookings.pluck(:date)
   end
+
+  def pending_bookings
+    bookings.where(status: "Pending").pluck(:date)
+  end
+
+  def confirmed_bookings
+    bookings.where(status: "Confirmed").pluck(:date)
+  end
 end
