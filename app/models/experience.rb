@@ -5,7 +5,7 @@ class Experience < ApplicationRecord
 
   CATEGORIES = [
     "Acheteur",
-    "Administrateur de base de données",
+    #"Administrateur de base de données",
     "Agent de sûreté aéroportuaire",
     "Agent de transit",
     "Agent d'entretien",

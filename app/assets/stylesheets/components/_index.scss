@@ -4,3 +4,18 @@
 @import "navbar";
 @import "banner";
 @import "cards";
+
+.container .title-text  h1 {
+font-family: CircularStd-Black,SimHei;
+font-size : 48px;
+font-color: red;
+line-height: 1em;
+letter-spacing: .1px;
+}
+
+.title-text h2 {
+  font-family: CircularStd-Black,SimHei;
+  font-size : 24px;
+  font-color: grey;
+}
+

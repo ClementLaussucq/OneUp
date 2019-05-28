@@ -1,14 +1,21 @@
 class ExperiencesController < ApplicationController
-  before_action :set_experience, only: [:show, :edit, :update, :destroy]
+  before_action :set_experience, only: [ :show, :edit, :update, :destroy]
 
 
   skip_after_action :verify_authorized, except: :index, unless: :skip_pundit?
   skip_after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
-
-
   def index
     @experiences = policy_scope(Experience)
+    if params[:query].present?
+      if params[:query][:city].present?
+        @experiences = @experiences.where(address: params[:query][:city])
+      end
+      if params[:query][:category].present?
+        @experiences = @experiences.where(category: params[:query][:category])
+      end
+    end
+
   end
 
   def new
