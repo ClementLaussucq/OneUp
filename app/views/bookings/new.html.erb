@@ -1,27 +1,37 @@
-<div class="container">
+<div class="banner rounde d-flex justify-content-center align-items-center">
+
+<div class="container d-flex justify-content-center align-items-center">
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert-danger" %>
   <% end %>
   <div class="card-booking">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-    <div class="card-booking-infos">
-      <div class="row">
-        <div class="card-booking-details col-12 col-md-6">
-          <h2><%="#{@experience.category} in #{@experience.address.capitalize}" %></h2>
-          <p><%= @experience.name %></p>
-          <p><%= @experience.description %></p>
-          <%= link_to "Back to more experiences", experiences_path, class: "btn btn-primary" %>
-        </div>
-        <div class="widget-content col-12 col-md-6" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
+    <img src="https://images.pexels.com/photos/1549003/pexels-photo-1549003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    <div class="d-flex flex-column align-items-left">
+      <div class="row d-flex justify-content-around align-items-center">
+            <h2 class="text-center"><%= @experience.name%> </h2>
+            <p class="my-0"><i class="fas fa-map-marker-alt">  </i>  <%=@experience.address%></p>
+            <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
+      </div>
+        <div class="widget-content col-12 d-flex flex-column justify-content-around align-items-center" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
           <%= simple_form_for [@experience, @booking] do |f| %>
             <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker"}  %>
-            <%= f.submit "Book now!", class: "btn btn-danger w-100" %>
+            <%= f.submit "Book now!", class: " btn-margin btn btn-danger w-100 mb-5" %>
           <% end %>
         </div>
+
+      <div class="row d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-column justify-content-around align-items-left">
+            <h3>A bit more about this experience...</h3>
+            <p><%= @experience.description %></p>
+          </div>
+          <div class="d-flex flex-column justify-content-around align-items-left">
+          <h3 class='font-weight-bold' id="price-up"><%= "#{@experience.price} €" %></h3>
+
+        </div>
       </div>
-      <h2 class="card-booking-pricing"><%= "#{@experience.price} €" %></h2>
-      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-booking-user avatar-bordered"/>
+    </div>
+   </div>
     </div>
   </div>
 </div>
-
+</div>

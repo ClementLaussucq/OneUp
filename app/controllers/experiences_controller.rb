@@ -15,7 +15,6 @@ class ExperiencesController < ApplicationController
         @experiences = @experiences.where(category: params[:query][:category])
       end
     end
-
   end
 
   def new

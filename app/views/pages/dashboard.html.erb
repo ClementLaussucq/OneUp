@@ -1,0 +1,31 @@
+
+<div class="container">
+  <h1>Test dashboard</h1>
+  <% @experiences.each_with_index do |experience, index| %>
+  <div class="row">
+    <div class="col-6">
+      <div class="widget-datepicker" data-pending="<%= experience.pending_bookings.to_json %>" data-confirmed="<%= experience.confirmed_bookings.to_json %>">
+        <ul>
+          <li>
+            <%= experience.name %>
+          </li>
+        </ul>
+        <% if experience.bookings.first.nil? %>
+          <p><%= "No bookings for this experience!" %></p>
+        <% else %>
+          <%= simple_form_for experience.bookings.first do |f| %>
+            <%= f.input :date , label: "Check the dates:", placeholder: "date", as: :string, input_html: {class: "datepicker-experiences-#{index}"}  %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<hr>
+
+<% @bookings.each do |booking| %>
+  <ul>
+    <li><%= "#{booking.date} - #{booking.status}" %></li>
+  </ul>
+<% end %>
