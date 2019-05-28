@@ -171,4 +171,8 @@ class Experience < ApplicationRecord
     "Strasbourg",
     "Rennes"
   ]
+
+  def unavailable_dates
+    bookings.pluck(:date)
+  end
 end
