@@ -12,4 +12,9 @@ class PagesController < ApplicationController
       }
     end
   end
+
+  def dashboard
+    @experiences = Experience.where(user_id: current_user)
+    @bookings = Booking.where(user_id: current_user)
+  end
 end

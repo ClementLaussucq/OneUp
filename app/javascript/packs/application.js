@@ -10,8 +10,9 @@ if (document.querySelector('.home-banner')) {
 }
 
 import "../plugins/flatpickr";
-import { dateInputs } from '../plugins/flatpickr';
+import { dateInputs, displayDashboardExperience } from '../plugins/flatpickr';
 dateInputs();
+displayDashboardExperience();
 
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 
