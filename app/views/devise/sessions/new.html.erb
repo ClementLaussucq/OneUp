@@ -1,20 +1,39 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
 
 <%= render "devise/shared/links" %>
+
+
+<div class="signup__container">
+  <div class="container__child signup__thumbnail">
+    <div class="thumbnail__logo">
+      <img class="logo__shape" width="25px" viewBox="0 0 634 479" src="#" alt="">
+      <h1 class="logo__text">OneUp</h1>
+    </div>
+    <div class="thumbnail__content text-center">
+      <h1 class="heading--primary">It's NOW.</h1>
+      <h2 class="heading--secondary">Your new life starts here!</h2>
+    </div>
+
+    <div class="signup__overlay"></div>
+  </div>
+
+<div class="container__child signup__form">
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Log in" %>
+    </div>
+  <% end %>
+
+<%= render "devise/shared/links" %>
+
+</div>
