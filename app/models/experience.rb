@@ -6,7 +6,7 @@ class Experience < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   CATEGORIES = [
     "Acheteur",
-    "Administrateur de base de données",
+    #"Administrateur de base de données",
     "Agent de sûreté aéroportuaire",
     "Agent de transit",
     "Agent d'entretien",

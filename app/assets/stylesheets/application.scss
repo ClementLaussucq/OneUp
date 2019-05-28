@@ -11,3 +11,88 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/card-experience";
+@import "pages/home";
+
+.container{
+  padding: 20px;
+}
+
+.index{
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.index h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.index p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.title-text  h1 {
+padding : none;
+font-size : 48px;
+color: white;
+line-height: 1em;
+letter-spacing: .3px;
+font-style: bolder;
+margin : 0px 0px 30px;
+}
+
+.title-text p {
+  font-size : 24px;
+  color: white;
+  margin: 0 0 30px;
+}
+
+a{
+  color: #5C1D28;
+  font-size: 24px;
+}
+.form-group {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #60666d;
+  }
+
+.container-form {
+  //width : 900px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  margin: 0px !important;
+}
+
+.row ul {
+  display: inline-block;
+  list-style-type:none
+}
+
+.display{
+  padding: 8px;
+}
