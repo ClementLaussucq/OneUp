@@ -11,15 +11,14 @@
 }
 
 .card-booking h2 {
-  font-size: 16px;
+  font-size: 32px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-booking p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
+  font-size: 16px;
+  margin-left: 10px;
 }
 
 
@@ -45,10 +44,50 @@
     top: -20px;
     width: 40px;
   }
-  .card-booking-pricing {
+   #card-booking-pricing {
     font-size: 24px;
     position: absolute;
     right: 16px;
     top: 35px;
+    margin-top: -25px;
   }
+  #experience-card-title {
+    color: black;
+    margin: 0px;
+    font-size: 32px;
+  }
+  .text-center {
+    font-size: 48px;
+  }
+  #categoryname {
+    font-size: 24px;
+  }
+  .flex-price {
+    margin-top: -25px;
+  }
+
+.experience-title {
+  margin-bottom: -30px;
+}
+.experience-show-card {
+  padding: 20px 40px;
+}
+.experience2-show-card {
+  padding: 50px 100px;
+}
+#experience-show-address {
+  margin-left: 10px;
+  font-size: 16px;
+}
+#price {
+  margin-top: -80px;
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+.btn-margin {
+  padding-bottom: 50px;
+}
+#price-up {
+  margin-top: -60px!important;
+}
 }
