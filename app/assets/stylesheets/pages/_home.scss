@@ -35,17 +35,22 @@
 }
 
 .cards {
-  margin: 50px 50px;
+  margin: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+
 }
 .subtitle {
   color:#5C1D28;
   font-weight: bolder;
+  padding-bottom: 20px;
 }
 .subtitle2 {
   color:#5C1D28;
   font-weight: bolder;
-  margin-top: 50px;
-  margin-bottom: -15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .carousel-inner {
   margin-top: 50px;

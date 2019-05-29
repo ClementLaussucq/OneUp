@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="col-6 experience-card-dflex">
-          <div class="js-booking-selected-<%= index %>" data-bookings="<%= @bookings.to_json %>" data-experiences="<%= @experiences.to_json %>" data-users="<% array = @experiences.map do |experience| %>
+          <div class="js-booking-selected-<%= index %>" data-bookings="<%= @bookings_user.to_json %>" data-experiences="<%= @experiences.to_json %>" data-users="<% array = @experiences.map do |experience| %>
               <% experience.users_info_booking %>
             <% end %>
             <%= array.to_json %>

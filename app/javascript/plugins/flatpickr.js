@@ -47,9 +47,12 @@ const insertHTMLToDashboard = (dateStr, index) => {
   const bookingsArray = JSON.parse(dashboardDiv.dataset.bookings);
   const experiencesArray = JSON.parse(dashboardDiv.dataset.experiences);
 
+  const bookingsArrayExp = bookingsArray[index];
+
   const experience = experiencesArray[index];
 
-  const bookingObj = bookingsArray.filter((booking) => {
+
+  const bookingObj = bookingsArrayExp.filter((booking) => {
     let bookingDate = new Date(booking.date);
     bookingDate.setHours(0,0,0,0);
     return ((bookingDate - dateStr) === 0) && (booking.experience_id === experience.id);
@@ -57,7 +60,6 @@ const insertHTMLToDashboard = (dateStr, index) => {
 
 
   const booking = bookingObj[0];
-
 
   const usersArray = JSON.parse(dashboardDiv.dataset.users)[index];
 

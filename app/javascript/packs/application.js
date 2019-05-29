@@ -9,7 +9,6 @@ if (document.querySelector('.home-banner')) {
   loadDynamicBannerText();
 }
 
-import "../plugins/flatpickr";
 import { dateInputs, displayDashboardExperience } from '../plugins/flatpickr';
 dateInputs();
 displayDashboardExperience();

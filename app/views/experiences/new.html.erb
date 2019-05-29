@@ -1,11 +1,25 @@
-<h1>Experiences#new</h1>
-<p>Find me in app/views/experiences/new.html.erb</p>
+<div class="container d-flex justify-content-center align-items-center">
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "alert-danger" %>
+  <% end %>
+  <div class="card-booking">
+    <img src="https://images.pexels.com/photos/1549003/pexels-photo-1549003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        <h1 class='text-center mt-4'>Create A New Experience</h1>
+     <div class="d-flex justify-content-around align-items-start infos">
+        <div class="d-flex flex-column justify-content-center align-items-center">
 
-<%= simple_form_for @experience do |f|%>
-<%= f.input :name  %>
-<%= f.input :description  %>
-<%= f.input :price  %>
-<%= f.input :category  %>
-<%= f.input :address %>
-<%= f.submit  %>
-<% end %>
+          <%= simple_form_for @experience do |f|%>
+          <%= f.input :name  %>
+          <%= f.input :description  %>
+          <%= f.input :price  %>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-start">
+          <%= f.input :category  %>
+          <%= f.input :address %>
+          <%= link_to 'Cancel', '#', class: 'btn btn-danger mt-4' %>
+          <%= f.submit  class: 'btn btn-primary mt-3' %>
+          <% end %>
+        </div>
+     </div>
+  </div>
+</div>
