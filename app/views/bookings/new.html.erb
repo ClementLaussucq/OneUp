@@ -5,7 +5,7 @@
     <%= content_tag :div, value, class: "alert-danger" %>
   <% end %>
   <div class="card-booking col-10">
-    <img src="https://images.pexels.com/photos/1549003/pexels-photo-1549003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    <%= cl_image_tag @experience.photo, height: 300, width: 400%>
     <div class="d-flex flex-column align-items-left">
       <div class="row d-flex justify-content-around align-items-center mt-3">
             <div class="d-flex flex-column align-items-start">

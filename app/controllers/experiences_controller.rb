@@ -28,7 +28,7 @@ class ExperiencesController < ApplicationController
     authorize @experience
 
     if @experience.save
-      redirect_to experience_path(@experience)
+      redirect_to new_experience_booking_path(@experience)
     else
       render :new
     end
@@ -40,6 +40,7 @@ class ExperiencesController < ApplicationController
 
   def show
     authorize @experience
+    @booking = Booking.new
   end
 
   def update
@@ -64,6 +65,6 @@ class ExperiencesController < ApplicationController
   end
 
   def strong_params
-    params.require(:experience).permit(:description, :name, :price, :address, :category)
+    params.require(:experience).permit(:description, :name, :price, :address, :category, :photo)
   end
 end
