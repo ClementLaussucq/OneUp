@@ -14,10 +14,25 @@
   justify-content: space-between;
   padding: 32px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  min-height: 363px;
+  min-height: 320px;
+  width: 100%;
   h4 {
     text-align: center;
     padding: 8px;
+  }
+}
+
+.experience-card-dflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  min-height: 363px;
+  a {
+    width: 53%;
+    margin: 4px;
   }
 }
 
@@ -29,6 +44,7 @@
   border: 1px solid rgba(206, 115, 130, 0.7);
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
+
 
 .card-dashboard-booking {
   overflow: hidden;
