@@ -5,6 +5,12 @@
   font-size: 24px;
   border-radius: 5px;
   padding: 15 30px;
+  &:hover {
+    background-color: #5C1D28;
+    opacity: 0.7;
+    color: white;
+    border: 1px solid #5C1D28;
+  }
 
 }
 .btn-black {
@@ -14,6 +20,12 @@
   border-radius: 5px;
   padding: 15 50px;
   margin-left: 10px;
+  &:hover {
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    border: 1px solid #061013;
+  }
 }
 .btn-black-nav {
   color: white;
@@ -22,6 +34,7 @@
   border-radius: 5px;
   padding: 4px 15px;
   margin-right: 10px;
+
 }
 // #boutons {
 //   margin-top: 50px;
