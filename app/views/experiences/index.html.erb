@@ -35,7 +35,7 @@
             <div>
               <h3><%= link_to experience.name, new_experience_booking_path(experience) %></h3>
               <p><%= experience.description%></p>
-              <p> <%= experience.address %>
+              <p><strong> <%=experience.address %></strong> </p>
             </div>
             <h2 class="card-experience-pricing"><%=experience.price%>€</h2>
             <img src='https://kitt.lewagon.com/placeholder/users/clementLaussucq' class="card-trip-user avatar-bordered"/>

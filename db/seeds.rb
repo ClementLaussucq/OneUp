@@ -69,17 +69,76 @@ users = User.all
 puts 'Creating awesome experiences...'
 
 
+Experience.create!({
+  user: users.sample,
+  name: "Chanteur",
+  description: "Viens, chante, danse et mets tes basquettes ce sera sympa tu verras",
+  price: 150,
+  address: "Paris",
+  category: "Artist",
+})
 
-50.times do
-  experiences_attributes = {
-      user: users.sample,
-      name: Faker::Job.title,
-      description: Faker::Lorem.paragraph,
-      price: rand(50..300),
-      address: Experience::CITIES_ADDRESS.sample,
-      category: Experience::CATEGORIES.sample,
-  }
-Experience.create!(experiences_attributes)
-end
+
+Experience.create!({
+  user: users.sample,
+  name: "Lawyer",
+  description: "Tu rêves d'assister à un procès? Alors viens passer une journée avec moi pour découvrir tout l'envers du décor",
+  price: 250,
+  address: "Paris",
+  category: "Lawyer",
+})
+
+
+Experience.create!({
+  user: users.sample,
+  name: "Boulanger",
+  description: "Procurer du bonheur aux autres est un métier d'avenir. Viens passer une journée et fais toi aussi la meilleurs baguette de Lyon",
+  price: 150,
+  address: "Lyon",
+  category: "Baker",
+})
+
+
+Experience.create!({
+  user: users.sample,
+  name: "Notaire",
+  description: "Etre notaire ce n'est pas que signer un papier pour certifier la vente d'un appartement. Viens passer une journée au coeur de la plus grande etude notariale de Bordeaux",
+  price: 220,
+  address: "Bordeaux",
+  category: "Notaire",
+})
+
+
+Experience.create!({
+  user: users.sample,
+  name: "Couturier",
+  description: "Entre la haute couture et la couture de ta grand mere il y a un monde passionnant. Viens le découvrir",
+  price: 230,
+  address: "Paris",
+  category: "Couturiere",
+})
+
+
+Experience.create!({
+  user: users.sample,
+  name: "Chef d'entreprise",
+  description: "Entre la haute couture et la couture de ta grand mere il y a un monde passionnant. Viens le découvrir",
+  price: 400,
+  address: "Paris",
+  category: "Couturiere",
+})
+
+
+# 50.times do
+#   experiences_attributes = {
+#       user: users.sample,
+#       name: Faker::Job.title,
+#       description: Faker::Lorem.paragraph,
+#       price: rand(50..300),
+#       address: Experience::CITIES_ADDRESS.sample,
+#       category: Experience::CATEGORIES.sample,
+#   }
+# Experience.create!(experiences_attributes)
+# end
 
 puts 'Finished!'
