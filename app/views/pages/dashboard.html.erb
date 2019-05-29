@@ -1,31 +1,64 @@
 
 <div class="container">
-  <h1>Test dashboard</h1>
-  <% @experiences.each_with_index do |experience, index| %>
-  <div class="row">
-    <div class="col-6">
-      <div class="widget-datepicker" data-pending="<%= experience.pending_bookings.to_json %>" data-confirmed="<%= experience.confirmed_bookings.to_json %>">
-        <ul>
-          <li>
-            <%= experience.name %>
-          </li>
-        </ul>
-        <% if experience.bookings.first.nil? %>
-          <p><%= "No bookings for this experience!" %></p>
-        <% else %>
-          <%= simple_form_for experience.bookings.first do |f| %>
-            <%= f.input :date , label: "Check the dates:", placeholder: "date", as: :string, input_html: {class: "datepicker-experiences-#{index}"}  %>
+  <h1>Your experiences, <%= current_user.first_name.capitalize + " " + current_user.last_name.capitalize %></h1>
+  <% if @experiences.nil? %>
+    <div class="row">
+      <%= link_to "Add your experience!", new_experience_path, class: "btn btn-primary"  %>
+    </div>
+  <% else %>
+    <% @experiences.each_with_index do |experience, index| %>
+    <div class="experience-card">
+      <h3><%= experience.name %></h3>
+      <div class="row">
+        <div class="col-6">
+          <div class="widget-datepicker" data-pending="<%= experience.pending_bookings.to_json %>" data-confirmed="<%= experience.confirmed_bookings.to_json %>">
+            <% if experience.bookings.first.nil? %>
+              <p><%= "No bookings for this experience!" %></p>
+            <% else %>
+              <%= simple_form_for experience.bookings.first do |f| %>
+                <%= f.input :date , label: "Check the dates:", placeholder: "date", as: :string, input_html: {class: "datepicker-experiences-#{index}"}  %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-6 js-booking-selected-<%= index %>" data-bookings="<%= @bookings.to_json %>" data-experiences="<%= @experiences.to_json %>" data-users="<% array = @experiences.map do |experience| %>
+            <% experience.users_info_booking %>
           <% end %>
-        <% end %>
+          <%= array.to_json %>
+          ">
+        </div>
       </div>
     </div>
-  </div>
+    <% end %>
   <% end %>
 </div>
 <hr>
+<div class="container">
+  <h1>Your bookings, <%= current_user.first_name.capitalize + " " + current_user.last_name.capitalize %></h1>
+  <% bookings = @bookings.sort_by(&:date) %>
+  <% bookings.each do |booking| %>
+    <div class="row">
+      <div class="card-dashboard-booking">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+        <div class="card-dashboard-booking-avatar">
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" alt="#">
+        </div>
+        <div class="card-dashboard-bookings">
+          <div class="card-dashboard-bookings-info">
+            <h2><%= booking.experience.name %></h2>
+            <p><%= "#{booking.experience.user.first_name.capitalize} #{booking.experience.user.last_name.capitalize}" %></p>
+            <p><%= booking.date %></p>
+          </div>
+          <% if (booking.status == "Confirmed") %>
+            <% class_value = "experience-confirmed" %>
+          <% else  %>
+            <% class_value = "experience-pending" %>
+          <% end %>
+          <h4 class="<%= class_value %>"><%= booking.status %></h4>
+          <%= link_to "Cancel", booking_path(booking), method: "delete", class: "btn btn-danger"  %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<% @bookings.each do |booking| %>
-  <ul>
-    <li><%= "#{booking.date} - #{booking.status}" %></li>
-  </ul>
-<% end %>

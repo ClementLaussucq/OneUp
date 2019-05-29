@@ -173,6 +173,21 @@ class Experience < ApplicationRecord
     "Rennes"
   ]
 
+  def users_info_booking
+    result_array = []
+    bookings.each do |booking|
+      user_name = "#{booking.user.first_name.capitalize} #{booking.user.last_name.capitalize}"
+      user_email = booking.user.email
+      user_booking = booking.id
+      hash_user = {}
+      hash_user[:name] = user_name
+      hash_user[:email] = user_email
+      hash_user[:booking_id] = user_booking
+      result_array << hash_user
+    end
+    return result_array
+  end
+
   def unavailable_dates
     bookings.pluck(:date)
   end
