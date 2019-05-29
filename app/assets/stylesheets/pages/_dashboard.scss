@@ -1,9 +1,13 @@
-.container {
+.container .dashboard-display {
   margin-top: 60px;
-}
-
-.container h1 {
-  margin-bottom: 0px;
+  h1 {
+    margin-bottom: 0px;
+  }
+  .row {
+    padding: 16px;
+    margin: 16px auto;
+    justify-content: space-around;
+  }
 }
 
 .js-card {
@@ -14,36 +18,45 @@
   justify-content: space-between;
   padding: 32px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  min-height: 320px;
-  width: 100%;
+  width: 320px;
   h4 {
     text-align: center;
     padding: 8px;
   }
 }
 
-.experience-card-dflex {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  min-height: 363px;
-  a {
-    width: 53%;
-    margin: 4px;
-  }
+.form-control-label {
+  color: black;
 }
 
 .experience-card {
   margin: 16px 0;
   padding: 16px;
-  background-color: rgba(206, 115, 130, 0.1);
+  background-color: white;
   border-radius: 4px;
-  border: 1px solid rgba(206, 115, 130, 0.7);
+  border: 1px solid rgba(30, 30, 30, 0.3);
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  position: relative;
+  .experience-btn {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
 }
+.experience-card-dflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto 0;
+  height: 390px;
+  width: 100%;
+  a {
+    width: 320px;
+    margin: 4px;
+  }
+}
+
 
 
 .card-dashboard-booking {
@@ -71,6 +84,7 @@
       flex-grow: 1;
       margin-left: 64px;
       h2 {
+        color: black;
         font-size: 16px;
         font-weight: bold;
         margin: 0;
