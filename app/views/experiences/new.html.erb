@@ -17,6 +17,8 @@
         <div class="d-flex flex-column justify-content-center align-items-center col-sm-4">
           <%= f.input :category, collection: Experience::CATEGORIES  %>
           <%= f.input :address %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
           <%= f.submit  class: 'btn btn-red mt-4' %>
           <% end %>
         </div>
