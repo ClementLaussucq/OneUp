@@ -9,11 +9,12 @@
 @import "font-awesome";
 
 // Your CSS partials
-@import "components/index";
-@import "pages/index";
 @import "components/card-experience";
-@import "pages/home";
+@import "components/index";
 @import "components/formulaire";
+@import "pages/dashboard";
+@import "pages/home";
+@import "pages/index";
 
 .container{
   padding: 20px;

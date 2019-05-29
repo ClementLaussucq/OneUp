@@ -27,27 +27,29 @@ class BookingsController < ApplicationController
     @booking.status = "Pending"
 
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to dashboard_path
     else
       render :new
     end
   end
 
   def edit
+    update
   end
 
   def show
   end
 
   def update
-    @booking.update(booking_params)
-
-    redirect_to booking_path(@booking)
+    # @booking.update(booking_params)
+    @booking.status = "Confirmed"
+    @booking.save
+    redirect_to dashboard_path
   end
 
   def destroy
     @booking.destroy
-    redirect_to bookings_path
+    redirect_to dashboard_path
   end
 
   private
