@@ -54,7 +54,7 @@ class ExperiencesController < ApplicationController
   def destroy
     @experience.destroy
     authorize @experience
-    redirect_to experiences_path
+    redirect_to dashboard_path
   end
 
   private

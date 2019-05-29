@@ -1,3 +1,32 @@
+.widget-datepicker {
+  .flatpickr-calendar {
+    width: 100% !important;
+    .flatpickr-months {
+      width: 100% !important;
+    }
+    .flatpickr-innerContainer {
+      width: 100% !important;
+      .flatpickr-rContainer {
+        width: 100% !important;
+        .flatpickr-weekdays {
+          width: 100% !important;
+        }
+        .flatpickr-days {
+          width: 100% !important;
+          .dayContainer {
+            width: 100% !important;
+            max-width: 100% !important;
+            .flatpickr-day {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 .experience-pending {
   color: $orange !important;
   border: 1px solid $orange !important;
