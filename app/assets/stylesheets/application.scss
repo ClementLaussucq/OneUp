@@ -71,6 +71,12 @@ a{
   color: #60666d;
   }
 
+  .form-inline label {
+    font-size : 16px;
+    margin: 10px;
+  }
+
+
 .container-form {
   //width : 900px;
   margin: 0 auto;
@@ -80,7 +86,7 @@ a{
   align-items: center;
 }
 
-.button
+
 
 .row {
   display: flex;

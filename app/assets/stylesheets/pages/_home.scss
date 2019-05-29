@@ -13,7 +13,19 @@
   }
 
 }
-
+.btn-red-filter {
+  color: white;
+  background-color: #5C1D28;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 8px 30px;
+  &:hover {
+    background-color: #5C1D28;
+    opacity: 0.7;
+    color: white;
+    border: 1px solid #5C1D28;
+  }
+}
 .card {
       position: relative;
     display: flex;
