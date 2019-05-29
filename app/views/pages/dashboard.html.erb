@@ -55,9 +55,9 @@
       <% bookings.each do |booking| %>
         <div class="row">
           <div class="card-dashboard-booking">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+            <%= cl_image_tag booking.experience.photo, height: 300, width: 120, crop: :fill %>
             <div class="card-dashboard-booking-avatar">
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" alt="#">
+              <%= cl_image_tag booking.experience.user.photo, height: 64, width: 64, crop: :fill %>
             </div>
             <div class="card-dashboard-bookings">
               <div class="card-dashboard-bookings-info">

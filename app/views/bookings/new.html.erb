@@ -20,8 +20,12 @@
           <h3 class='font-weight-bold text-right mr-5 price-size' id="price-up element-absolute"><%= "#{@experience.price} €" %></h3>
         <div class="widget-content col-12 d-flex flex-column justify-content-left align-items-right" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
           <%= simple_form_for [@experience, @booking] do |f| %>
-            <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker", id:"colordate"}  %>
-            <%= f.submit "Book now!", class: " btn-margin btn btn-red w-100 mb-5" %>
+            <% disabling = false %>
+            <% if @experience.user_id == current_user.id %>
+              <% disabling = true %>
+            <% end %>
+            <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker", id:"colordate"} %>
+            <%= f.submit "Book now!", class: " btn-margin btn btn-red w-100 mb-5", disabled: disabling %>
           <% end %>
         </div>
 

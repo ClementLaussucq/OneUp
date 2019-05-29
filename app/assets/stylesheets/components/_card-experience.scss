@@ -23,13 +23,29 @@
   margin: 0;
 }
 
+.sticky {
+  position: absolute;
+  left: 16px;
+  bottom: -30px;
+  padding: auto;
+}
 
 .card-experience .card-experience-infos {
   padding: 16px;
   display: flex;
+  height: 180px;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  > div {
+    height: 100%;
+    position: relative;
+    > p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
   p {
     font-size: 16px;
   }
