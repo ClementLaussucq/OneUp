@@ -22,15 +22,18 @@ const initUpdateNavbarOnScroll = () => {
         navbarCreate.style.display="none";
         navbarSign.style.display="none";
         navbarAll.style.display="none";
+        navbar.classList.add("none");
       }
     });
   }
   else {
-        navbar.classList.add('navbar-lewagon-white');
-        navbarTitle.style.display="block";
-        navbarHome.style.display="block";
-        navbarAll.style.display="block";
-        navbar.classList.add('active-white');
+    navbar.classList.add('navbar-lewagon-white');
+    navbarTitle.style.display="block";
+    navbarHome.style.display="block";
+    navbarCreate.style.display="block";
+    navbarSign.style.display="block";
+    navbarAll.style.display="block";
+    navbar.classList.add('active-white');
       }
 
 }

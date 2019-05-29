@@ -18,7 +18,7 @@
             </div><!--
             <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/> -->
       </div>
-          <h3 class='font-weight-bold text-right mt-5 mr-3 price-size' id="price-up element-absolute"><%= "#{@experience.price} €" %></h3>
+          <h3 class='font-weight-bold text-right mt-5 mr-5 price-size' id="price-up element-absolute"><%= "#{@experience.price} €" %></h3>
         <div class="widget-content col-12 d-flex flex-column justify-content-left align-items-right" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
           <%= simple_form_for [@experience, @booking] do |f| %>
             <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker", id:"colordate"}  %>

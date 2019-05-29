@@ -2,12 +2,14 @@ import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
   const bannerTypedText = document.querySelector('#banner-typed-text');
+  console.log(bannerTypedText);
   if (bannerTypedText) {
     new Typed('#banner-typed-text', {
-      strings: ["With A Lawyer", "With A Penguin", "With An Entrepreneur", "With A Teacher"],
-      typeSpeed: 30,
-      loop: true
+      strings: ["A Lawyer", "A Penguin", "An Entrepreneur", "A Teacher"],
+      typeSpeed: 80,
+      loop: true,
     });
+    console.log(bannerTypedText);
   };
 };
 

@@ -34,13 +34,33 @@
   border-radius: 5px;
   padding: 4px 15px;
   margin-right: 10px;
+  &:hover {
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    border: 1px solid #061013;
+  }
+
+}
+.btn-create-nav {
+  color: white;
+  background-color: transparent;
+  font-size: 24px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 2px;
+  &:hover {
+    color: #5C1D28 !important;
+    background-color: white;
+  }
 
 }
 // #boutons {
 //   margin-top: 50px;
 // }
 .container h1 {
-  margin-bottom: 112px;
+  margin-bottom: 10px;
 }
 .vignette {
   height: 300px;
