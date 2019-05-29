@@ -9,6 +9,7 @@
   <a class="btn btn-opposite" href="#">See All Our Cocktails</a> -->
   </div>
   </div>
+<div class="container d-flex flex-column align-items-center">
   <h2 class="text-center subtitle2 p-10">Only Awesome features</h2>
   <div class="row d-flex justify-content-around mt-24 cards">
     <div class="col-sm-4">
@@ -37,26 +38,31 @@
     </div>
   </div>
 
-<div class="container d-flex flex-column align-items-center">
   <h2 class="subtitle mt-5">Our Members Love</h2>
 
   <div class="cards " >
     <% @experiences.sample(6).each do |experience| %>
 
-      <div class="card-trip">
-        <%= image_tag('christophe.jpg', class: "vignette")%>
-        <div class="card-trip-infos">
-          <div>
-            <h3><%= link_to experience.name, experience_path(experience) %></h3>
-            <p><%= experience.description%></p>
+      <div class="card-experience">
+        <img src='https://images.unsplash.com/photo-1555374018-13a8994ab246?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'>
+     <!--  <% i = 1 %>
+      <img src="/cocktail1.jpeg"> -->
+          <div class="card-experience-infos">
+            <div>
+              <h3><%= link_to experience.name, new_experience_booking_path(experience) %></h3>
+              <p><%= experience.description%></p>
+              <p> <%= experience.address %>
+            </div>
+            <h2 class="card-experience-pricing"><%=experience.price%>€</h2>
+            <img src='https://kitt.lewagon.com/placeholder/users/clementLaussucq' class="card-trip-user avatar-bordered"/>
+            <% i += 1 %>
           </div>
-          <h2>€1000</h2>
-        </div>
       </div>
-      <% end %>
-    </div>
+  <% end %>
   </div>
+
 </div>
+
 <div class="container d-flex flex-column align-items-center">
   <h2 class="subtitle mt-5">We're All Over The Place</h2>
 </div>

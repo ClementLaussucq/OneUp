@@ -7,6 +7,20 @@
   padding: 15 30px;
 
 }
+
+.card {
+      position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 2px;
+    height: 300px;
+}
+
 .btn-black {
   color: white;
   background-color: #061013;
@@ -30,8 +44,8 @@
   margin-bottom: 112px;
 }
 .vignette {
-  height: 300px;
-  width: auto;
+  height: 200px;
+  width: 250px;
 }
 
 .cards {
