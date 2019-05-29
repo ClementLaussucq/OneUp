@@ -7,4 +7,5 @@
   has_many :experiences, dependent: :destroy
   has_many :bookings, dependent: :destroy
   validates :first_name, :last_name, presence: true
+  mount_uploader :photo, PhotoUploader
 end
