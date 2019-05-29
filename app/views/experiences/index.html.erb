@@ -35,8 +35,8 @@
               <p><%= experience.description%></p>
               <p><strong> <%=experience.address %></strong> </p>
             </div>
+            <%= cl_image_tag current_user.photo, width: 40, class: 'rounded' %>
             <h2 class="card-experience-pricing"><%=experience.price%>€</h2>
-            <img src='https://kitt.lewagon.com/placeholder/users/clementLaussucq' class="card-trip-user avatar-bordered"/>
           </div>
       </div>
     <% end %>
