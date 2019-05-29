@@ -42,6 +42,10 @@
 #navbarDropdown {
   font-size: 20px;
   margin-top: 12px;
+  color: white;
+  height: 30px;
+  width: 50px;
+  margin-left: 10px;
 }
 .dropdown {
   cursor: pointer;
@@ -52,4 +56,14 @@
 .navbar-title {
   font-style: italic;
   font-size: 28px;
+  font-weight: 700;
+}
+.dropdown-item {
+  font-size: 16px;
+}
+.register {
+  background-color: #5C1D28;
+  color: white;
+  margin-bottom: -10px;
+  font-weight: 700;
 }

@@ -2,22 +2,22 @@
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert-danger" %>
   <% end %>
-  <div class="card-booking">
+  <div class="card-booking col-10">
     <img src="https://images.pexels.com/photos/1549003/pexels-photo-1549003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-        <h1 class='text-center mt-4'>Create A New Experience</h1>
-     <div class="d-flex justify-content-around align-items-start infos">
-        <div class="d-flex flex-column justify-content-center align-items-center">
+    <h1 class='text-center mt-4 text-dark font-weight-bold'>Mentor Away !</h1>
+    <p class='text-center text-dark ' id="p-newexp">Create Your Own Experience And Share Your Job With The World</p>
+     <div class="d-flex justify-content-around align-items-center infos">
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-4">
 
           <%= simple_form_for @experience do |f|%>
           <%= f.input :name  %>
           <%= f.input :description  %>
           <%= f.input :price  %>
         </div>
-        <div class="d-flex flex-column justify-content-center align-items-start">
-          <%= f.input :category  %>
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-4">
+          <%= f.input :category, collection: Experience::CATEGORIES  %>
           <%= f.input :address %>
-          <%= link_to 'Cancel', '#', class: 'btn btn-danger mt-4' %>
-          <%= f.submit  class: 'btn btn-primary mt-3' %>
+          <%= f.submit  class: 'btn btn-red mt-4' %>
           <% end %>
         </div>
      </div>

@@ -4,29 +4,30 @@
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert-danger" %>
   <% end %>
-  <div class="card-booking">
+  <div class="card-booking col-10">
     <img src="https://images.pexels.com/photos/1549003/pexels-photo-1549003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
     <div class="d-flex flex-column align-items-left">
-      <div class="row d-flex justify-content-around align-items-center">
+      <div class="row d-flex justify-content-around align-items-center mt-3">
+            <div class="d-flex flex-column align-items-start">
             <h2 class="text-center"><%= @experience.name%> </h2>
-            <p class="my-0"><i class="fas fa-map-marker-alt">  </i>  <%=@experience.address%></p>
-            <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
+            <p><%= @experience.description %></p>
+            </div>
+            <div class="d-flex flex-column justify-content-start">
+             <p class="my-0 mt-3"><i class="fas fa-briefcase">  </i>  <%=@experience.category%></p>
+            <p class="my-0 mt-3"><i class="fas fa-map-marker-alt">  </i>  <%=@experience.address%></p>
+            </div><!--
+            <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/> -->
       </div>
-        <div class="widget-content col-12 d-flex flex-column justify-content-around align-items-center" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
+          <h3 class='font-weight-bold text-right mt-5 mr-5 price-size' id="price-up element-absolute"><%= "#{@experience.price} €" %></h3>
+        <div class="widget-content col-12 d-flex flex-column justify-content-left align-items-right" data-unavailable="<%= @experience.unavailable_dates.to_json %>">
           <%= simple_form_for [@experience, @booking] do |f| %>
-            <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker"}  %>
-            <%= f.submit "Book now!", class: " btn-margin btn btn-danger w-100 mb-5" %>
+            <%= f.input :date, label: "Please select your date:", as: :string, input_html: {class: "datepicker", id:"colordate"}  %>
+            <%= f.submit "Book now!", class: " btn-margin btn btn-red w-100 mb-5" %>
           <% end %>
         </div>
 
-      <div class="row d-flex justify-content-between align-items-center">
+      <div class="row d-flex justify-content-around align-items-center">
           <div class="d-flex flex-column justify-content-around align-items-left">
-            <h3>A bit more about this experience...</h3>
-            <p><%= @experience.description %></p>
-          </div>
-          <div class="d-flex flex-column justify-content-around align-items-left">
-          <h3 class='font-weight-bold' id="price-up"><%= "#{@experience.price} €" %></h3>
-
         </div>
       </div>
     </div>

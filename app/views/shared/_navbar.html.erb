@@ -12,16 +12,19 @@
       <li class="nav-item active">
         <%= link_to "Home", root_path, class: "nav-link", id:"homewhite" %>
       </li>
-      <li class="nav-item create">
-        <%= link_to "Create", new_experience_path, class: "nav-link btn btn-black-nav", id:"homewhite" %>
+      <li class="nav-item active all">
+        <%= link_to "Our Experiences ", experiences_path, class: "nav-link", id:"homewhite" %>
       </li>
-      <li class="nav-item dropdown sign">
+      <li class="nav-item active create">
+        <%= link_to "Create", new_experience_path, class: "nav-link btn btn-create-nav", id:"homewhite" %>
+      </li>
+      <li class="nav-item active dropdown sign">
         <i class="fas fa-user avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Sign Up", new_user_session_path, class: "dropdown-item" %>
-          <%= link_to "Settings", "#", class: "dropdown-item" %>
+          <%= link_to "Sign In", new_user_session_path, class: "dropdown-item" %>
           <%= link_to "Dashboard", dashboard_path , class: "dropdown-item" %>
            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+           <%= link_to "Register", new_use_registration_path, class: "dropdown-item register" %>
         </div>
       </li>
     </ul>
